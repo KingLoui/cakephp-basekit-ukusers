@@ -1,7 +1,13 @@
 {
     "name": "kingloui/cakephp-basekit-ukusers",
-    "description": "CakeDC UK Users wrapper for BaseKit CakePHP Plugin",
+    "description": "UniKAssel users plugin for BaseKit",
     "type": "cakephp-plugin",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/KingLoui/LDAP"
+        }
+    ],
     "require": {
         "php": ">=5.5.9",
         "cakephp/cakephp": ">=3.3.2 <4.0.0",
