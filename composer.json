@@ -2,16 +2,10 @@
     "name": "kingloui/cakephp-basekit-ukusers",
     "description": "Uni Kassel users plugin for BaseKit",
     "type": "cakephp-plugin",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/KingLoui/LDAP"
-        }
-    ],
     "require": {
         "php": ">=5.5.9",
         "cakephp/cakephp": ">=3.3.2 <4.0.0",
-        "queencitycodefactory/ldap": "dev-update as dev-master",
+        "kingloui/cakephp-ldap": "dev-master",
         "kingloui/cakephp-basekit-users": "dev-master"
     },
     "require-dev": {
