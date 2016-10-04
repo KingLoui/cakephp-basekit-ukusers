@@ -1,0 +1,25 @@
+{
+    "name": "kingloui/cakephp-basekit-ukusers",
+    "description": "CakeDC UK Users wrapper for BaseKit CakePHP Plugin",
+    "type": "cakephp-plugin",
+    "require": {
+        "php": ">=5.5.9",
+        "cakephp/cakephp": ">=3.3.2 <4.0.0",
+        "queencitycodefactory/ldap": "dev-master",
+        "kingloui/cakephp-basekit-users": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "KingLoui\\BaseKitUkUsers\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KingLoui\\BaseKitUkUsers\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}
