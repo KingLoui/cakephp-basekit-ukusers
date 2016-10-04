@@ -43,18 +43,6 @@ $config = [
             'action' => 'login'
         ],
         'unauthorizedRedirect' => false,
-        'loginRedirect' => [
-            'prefix' => 'admin',
-            'plugin' => false,
-            'controller' => 'pages',
-            'action' => 'dashboard'
-            
-        ],
-        'logoutRedirect' => [
-            'controller' => 'pages',
-            'action' => 'home',
-            'prefix' => false
-        ],
         'authorize' => [
             'CakeDC/Users.SimpleRbac' => [
                 'autoload_config' => 'permissions'
