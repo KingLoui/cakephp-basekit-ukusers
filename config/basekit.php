@@ -6,7 +6,7 @@ use Cake\Routing\Router;
 $config = [
 	'BaseKit' => [
 		'NavTop' => [
-			'TopLinksElement' => 'KingLoui/BaseKitUkUsers.toplinks'
+			'TopLinksElement' => ''
 		],
 		'NavSidebar' => [
 			'HeaderElement' => 'KingLoui/BaseKitUkUsers.adminbarheader',
