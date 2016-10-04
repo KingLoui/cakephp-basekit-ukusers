@@ -11,7 +11,7 @@
     "require": {
         "php": ">=5.5.9",
         "cakephp/cakephp": ">=3.3.2 <4.0.0",
-        "queencitycodefactory/ldap": "dev-update",
+        "queencitycodefactory/ldap": "dev-update as dev-master",
         "kingloui/cakephp-basekit-users": "dev-master"
     },
     "require-dev": {
