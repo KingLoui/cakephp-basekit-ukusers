@@ -2,8 +2,18 @@
 
 namespace KingLoui\BaseKitUkUsers\Controller\Traits;
 
+use CakeDC\Users\Controller\Component\UsersAuthComponent;
+use Cake\ORM\TableRegistry;
+use Cake\Routing\Router;
+use Cake\Event\Event;
+use Cake\Core\Configure;
+
 trait LoginTrait
 {
+    public function beforeFilter(Event $event) {
+        parent::beforeFilter($event);
+        $this->Auth->allow('logout');
+    }
 
     public function login()
     {
@@ -33,19 +43,18 @@ trait LoginTrait
                 // check if user has account
                 if($query->count() == 1) 
                     // authed
-                    $login = true;
+                    if($query->first()->active == true)
+                        $login = true;
+                    else 
+                        $this->Flash->error(__('Ihr Account wurde deaktiviert.'));
                 else {
-                    // check if user has correct role
-                    if (    in_array('Student', $user['eduPersonAffiliation']) 
-                        ||  in_array('Staff', $user['eduPersonAffiliation'])) {
-                        // check if useraccount is not secondary
-                        if(!in_array('Sekundäraccount', $user['workforceID']))
-                            // authed
+                    $checker =  Configure::read('UkLdap.loginConstraintChecker');
+                    if (isset($checker) && is_object($checker) && ($checker instanceof \Closure)) {
+                        if($checker($user, $this))
                             $login = true;
-                        else
-                            $this->Flash->error(__('Sie können sich nur mit ihrem Primäraccount anmelden.'));
-                    } else
-                        $this->Flash->error(__('Nur Studenten und Mitarbeiter haben die Möglichkeit sich einen Account auszuleihen.'));
+                    } else {
+                        $login = true;
+                    }
                 }
             } else
                 $this->Flash->error(__('Benutzername oder Passwort falsch, bitte versuchen Sie es erneut!'));
