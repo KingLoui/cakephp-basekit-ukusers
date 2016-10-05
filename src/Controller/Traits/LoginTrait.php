@@ -21,7 +21,7 @@ trait LoginTrait
         {
             // Check if user is already logged in
             if ($this->Auth->user()) {
-                $this->Flash->error(__('You are already logged in'));
+                $this->Flash->error(__d('KingLoui/BaseKitUkUsers', 'You are already logged in'));
                 return $this->redirect($this->Auth->redirectUrl());
             }
 
@@ -46,7 +46,7 @@ trait LoginTrait
                     if($query->first()->active == true)
                         $login = true;
                     else 
-                        $this->Flash->error(__('Ihr Account wurde deaktiviert.'));
+                        $this->Flash->error(__d('KingLoui/BaseKitUkUsers', 'Your account is set to inactive'));
                 else {
                     $checker =  Configure::read('UkLdap.loginConstraintChecker');
                     if (isset($checker) && is_object($checker) && ($checker instanceof \Closure)) {
@@ -57,7 +57,7 @@ trait LoginTrait
                     }
                 }
             } else
-                $this->Flash->error(__('Benutzername oder Passwort falsch, bitte versuchen Sie es erneut!'));
+                $this->Flash->error(__d('KingLoui/BaseKitUkUsers', 'Username and/or password incorrect'));
 
             //
             // Perform Login
@@ -113,7 +113,7 @@ trait LoginTrait
         }
 
         $this->request->session()->destroy();
-        $this->Flash->success(__('You\'ve successfully logged out'));
+        $this->Flash->success(__d('KingLoui/BaseKitUkUsers', 'You\'ve successfully logged out'));
 
         $eventAfter = $this->dispatchEvent(UsersAuthComponent::EVENT_AFTER_LOGOUT);
         if (is_array($eventAfter->result)) {
