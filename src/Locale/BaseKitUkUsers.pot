@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-10-05 13:54+0200\n"
+"POT-Creation-Date: 2016-10-05 14:45+0200\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -28,5 +28,13 @@ msgstr ""
 
 #: Controller/Traits/LoginTrait.php:116
 msgid "You've successfully logged out"
+msgstr ""
+
+#: Template/Admin/Element/adminbarheader.ctp:9
+msgid "Logout"
+msgstr ""
+
+#: Template/Admin/Element/toplinks.ctp:10
+msgid "Log out"
 msgstr ""
 

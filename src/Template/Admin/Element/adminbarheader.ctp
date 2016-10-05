@@ -6,6 +6,6 @@
 	        <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold"><?= $user['first_name'] ?> <?= $user['last_name'] ?></strong>
 	         </span> <span class="text-muted text-xs block"><?= $user['username'] ?> <b class="caret"></b></span> </span> </a>
 	<ul class="dropdown-menu animated fadeInRight m-t-xs">
-	    <li><?= $this->Html->link('Logout', ['prefix' => false,'plugin' => false, 'controller' => 'Users', 'action' => 'logout']); ?></li>
+	    <li><?= $this->Html->link(__d('KingLoui/BaseKitUkUsers', 'Logout'), ['prefix' => false,'plugin' => false, 'controller' => 'Users', 'action' => 'logout']); ?></li>
 	</ul>
 </div>

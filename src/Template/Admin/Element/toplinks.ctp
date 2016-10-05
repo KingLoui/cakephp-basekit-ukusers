@@ -7,7 +7,7 @@
     </li>
     <li>
         <a href="<?= $this->Url->build(['prefix' => false, 'plugin' => false, 'controller' => 'Users', 'action' => 'logout']); ?>">
-            <i class="fa fa-sign-out"></i> Log out
+            <i class="fa fa-sign-out"></i><?= __d('KingLoui/BaseKitUkUsers', 'Log out') ?>
         </a>
     </li>
 </ul>
