@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: 2016-10-05 14:46+0200\n"
-"PO-Revision-Date: 2016-10-05 14:46+0200\n"
+"PO-Revision-Date: 2016-10-13 11:33+0200\n"
 "Last-Translator: \n"
 "Language-Team: EMAIL@ADDRESS\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: Controller/Traits/LoginTrait.php:24
 msgid "You are already logged in"
-msgstr ""
+msgstr "Sie sind bereits angemeldet"
 
 #: Controller/Traits/LoginTrait.php:49
 msgid "Your account is set to inactive"
