@@ -98,8 +98,6 @@ trait LoginTrait
                 $event = $this->dispatchEvent(UsersAuthComponent::EVENT_AFTER_LOGIN);
 
                 // redirect the user
-                if($user['role'] == 'admin')
-                    return $this->redirect('/admin');
                 return $this->redirect($this->Auth->redirectUrl());
             }
         }
