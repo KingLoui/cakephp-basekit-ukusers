@@ -6,7 +6,7 @@
         "php": ">=5.5.9",
         "cakephp/cakephp": ">=3.3.2 <4.0.0",
         "queencitycodefactory/ldap": "dev-master",
-        "kingloui/cakephp-basekit-users": "dev-master"
+        "kingloui/cakephp-basekit-users": "0.1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
