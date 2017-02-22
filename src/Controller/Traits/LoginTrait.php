@@ -70,7 +70,7 @@ trait LoginTrait
                     // setup new entry
                     $dbuser = $this->Users->newEntity();
                     $dbuser->role = 'user';
-                    $dbuser->is_active = 1;
+                    $dbuser->active = 1;
                 } else {
                     // update entry
                     $dbuser = $query->first();
